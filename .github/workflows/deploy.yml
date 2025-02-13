@@ -30,6 +30,11 @@ jobs:
           docker tag todo-frontend ${{ secrets.AWS_ECR_URI }}/todo-frontend:latest
           docker push ${{ secrets.AWS_ECR_URI }}/todo-frontend:latest
 
+      - name: Setup SSH Key
+        run: |
+          echo "${{ secrets.EC2_SSH_KEY }}" | tr -d '\r' > private_key.pem
+          chmod 600 private_key.pem
+
       - name: Deploy to EC2
         uses: appleboy/ssh-action@master
         with:
