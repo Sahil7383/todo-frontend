@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "frontend/**" # Runs only if frontend files are changed
 
 jobs:
   deploy-frontend:
