@@ -82,7 +82,7 @@ function App() {
                 setEditingTask(task);
                 setShowForm(true);
               }}
-              onDelete={handleDeleteTask}
+              onDelete={() => handleDeleteTask(task._id)}
             />
           ))}
         </div>
