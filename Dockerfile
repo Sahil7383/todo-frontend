@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . .
 
 # Install dependencies and build frontend
-RUN npm install
+RUN npm install --force
 RUN npm run build
 
 # Expose the frontend port
