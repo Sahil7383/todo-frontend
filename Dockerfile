@@ -12,7 +12,7 @@ RUN npm install --force
 RUN npm run build
 
 # Expose the frontend port
-EXPOSE 3000
+EXPOSE 5173
 
 # Start the frontend app
 CMD ["npm", "run", "dev"]
