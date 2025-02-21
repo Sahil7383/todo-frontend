@@ -1,2 +1,0 @@
-# todo-frontend
-Todo Application
